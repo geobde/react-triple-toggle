@@ -6,6 +6,43 @@
 npm i react-triple-toggle --save
 ```
 
+## Usage
+
+```
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import { Toggle } from "react-triple-toggle";
+
+let initialData = {
+  left: false,
+  right: false,
+  middle: true
+};
+
+function App() {
+  let [data, setData] = useState(initialData);
+
+  const handleChange = event => {
+    switch (event) {
+      case "left":
+        return setData({ left: true, right: false, middle: false });
+      case "middle":
+        return setData({ left: false, right: false, middle: true });
+      case "right":
+        return setData({ left: false, right: true, middle: false });
+      default:
+        return event;
+    }
+  };
+
+  return <Toggle data={data} onChange={handleChange} />;
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+```
+
 ## Props
 
 - `data` - An object of data which acts as the source of data for the toggle. This prop is required.
