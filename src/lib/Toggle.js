@@ -5,23 +5,12 @@ import "./Toggle.css";
 
 
 const Toggle = props => {
-  let [data, setData] = useState(props.data);
+   const {data, onChange} = props;
 
   const handleChange = (event) => {
-     if (props.onChange) {
-        props.onChange(event);
-     } else {
-       switch(event) {
-        case "left":
-        return setData({ left:true, right:false, middle:false });
-        case "middle":
-        return  setData({ left:false, right:false, middle:true });
-        case "right":
-        return setData({ left:false, right:true, middle:false });
-        default:
-        return event;
-      }
-     }
+     if (onChange) {
+        onChange(event);
+     } 
   };
 
   return (

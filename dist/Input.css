@@ -1,0 +1,100 @@
+.Input {
+	position: relative;
+}
+
+.Input  .radio {
+	position: absolute;
+    top: 6px;
+	left: 6px;
+}
+
+
+
+.Input  input[type="radio"] {
+    opacity: 0;
+	cursor: pointer;
+
+}
+
+
+ .Input .checkmark{
+   cursor: pointer;
+  width:25px;
+  height:25px;
+}
+
+.Input .left.checked + .checkmark {
+  background-color: green;
+  border-radius:30px;
+  border:1px solid transparent;
+  
+    background: rgb(32, 213, 50);
+    background: -moz-linear-gradient(top, rgba(32, 213, 50, 1) 0%, rgba(28, 195, 1, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(32, 213, 50, 1)), color-stop(100%, rgba(28, 195, 1, 1)));
+    background: -webkit-linear-gradient(top, rgba(32, 213, 50, 1) 0%, rgba(28, 195, 1, 1) 100%);
+    background: -o-linear-gradient(top, rgba(32, 213, 50, 1) 0%, rgba(28, 195, 1, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(32, 213, 50, 1) 0%, rgba(28, 195, 1, 1) 100%);
+    background: linear-gradient(to bottom, rgba(32, 213, 50, 1) 0%, rgba(28, 195, 1, 1) 100%);
+    -moz-animation-duration: 0.4s;
+    -moz-animation-name: slidein;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-name: slidein;
+    animation-duration: 0.4s;
+    animation-name: slidein;
+    -webkit-transform: translateZ(0);
+}
+
+.Input .middle.checked + .checkmark {
+  background-color:  white;
+  border-radius:30px;
+}
+
+.Input .right.checked+ .checkmark {
+  background-color: #feaf00;
+  border-radius:30px;
+  border:1px solid transparent;
+  
+   -moz-animation-duration: 0.4s;
+    -moz-animation-name: slideno;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-name: slideno;
+    animation-duration: 0.4s;
+    animation-name: slideno; 
+}
+
+@keyframes slidein {
+    from {
+        transform: translate(50px, 0);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+
+@keyframes slideno {
+    from {
+      transform: translate(-50px,0);
+    }
+    to {
+        transform: translate( 0px, 0px);
+    }
+}
+
+@keyframes returnLeft {
+    from {
+        transform: translate(-50px,0);
+    }
+    to {
+        transform: translate(0px,0);
+    }
+}
+
+@keyframes returnRight {
+    from {
+        transform: translate(50px,0);
+    }
+    to {
+        transform: translate(0px,0);
+    }
+}

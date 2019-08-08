@@ -13,7 +13,7 @@ npm i react-triple-toggle --save
 
 ## Example
 
-[![Edit react-edit](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-edit-bwhnw?fontsize=14)
+[![Edit react-triple-toggle](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/stoic-bartik-zesk5?fontsize=14)
 
 ## Built With
 
