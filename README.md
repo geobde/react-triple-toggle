@@ -8,6 +8,8 @@ npm i react-triple-toggle --save
 
 ## Usage
 
+### Controlled component
+
 ```
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
@@ -36,6 +38,24 @@ function App() {
   };
 
   return <Toggle checked={data} onChange={(e) => handleChange(e)} />;
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+```
+
+### Uncontrolled component
+
+```
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import { Toggle } from "react-triple-toggle";
+
+
+function App() {
+
+  return <Toggle />;
 }
 
 const rootElement = document.getElementById("root");
