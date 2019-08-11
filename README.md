@@ -35,7 +35,7 @@ function App() {
     }
   };
 
-  return <Toggle data={data} onChange={handleChange} />;
+  return <Toggle checked={data} onChange={(e) => handleChange(e)} />;
 }
 
 const rootElement = document.getElementById("root");
@@ -43,10 +43,14 @@ ReactDOM.render(<App />, rootElement);
 
 ```
 
-## Props
+## API
 
-- `data` - An object of data which acts as the source of data for the toggle. This prop is required.
-- `onChange` - A function which acts as a callback when the toggle is changed.
+| Prop              | Type       | Description |
+|-------------------|------------|-------------|
+| `checked`         | _object_  |  Use this if you want to treat the toggle as a controlled component. |
+| `defaultChecked`  | _object_  |  Use this if you want to treat the toggle as an uncontrolled component. |
+| `onChange`        | _function_ | A function which acts as a callback when the toggle is changed. |
+
 
 ## Example
 

@@ -16,10 +16,8 @@ const Input = props => {
 		/>
 	    <div class="checkmark"></div>
 		</div>
- 
   )
 };
-
 
 Input.propTypes = {
     type: PropTypes.string,
@@ -31,6 +29,5 @@ Input.defaultProps = {
     type: 'text',
     checked: false
 };
-
 
 export default Input;
