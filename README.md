@@ -1,6 +1,6 @@
 React multi toggle component.
 
-![Alt text](http://full/path/to/img.jpg "Optional title")
+![Alt text](https://github.com/geobde/react-triple-toggle/blob/master/toggle.gif "Triple Toggle")
 
 ## Installation
 
