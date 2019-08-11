@@ -8,6 +8,26 @@ npm i react-triple-toggle --save
 
 ## Usage
 
+### Uncontrolled component
+
+```
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import { Toggle } from "react-triple-toggle";
+
+
+function App() {
+
+  return <Toggle />;
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+```
+[![Edit react-triple-toggle-2](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/nice-brook-yzeid?fontsize=14)
+
+
 ### Controlled component
 
 ```
@@ -47,25 +67,6 @@ ReactDOM.render(<App />, rootElement);
 
 [![Edit react-triple-toggle](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-triple-toggle-zesk5?fontsize=14)
 
-
-### Uncontrolled component
-
-```
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import { Toggle } from "react-triple-toggle";
-
-
-function App() {
-
-  return <Toggle />;
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
-
-```
-[![Edit react-triple-toggle-2](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/nice-brook-yzeid?fontsize=14)
 
 
 ## API
