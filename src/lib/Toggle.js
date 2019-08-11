@@ -44,8 +44,18 @@ const Toggle = props => {
 };
 
 Toggle.propTypes = {
-   checked: PropTypes.object,
-   defaultChecked: PropTypes.object,
+   checked: PropTypes.shape({
+       left:PropTypes.bool,
+       right:PropTypes.bool,
+       middle:PropTypes.bool,
+   }),
+   
+   defaultChecked: PropTypes.shape({
+       left:PropTypes.bool,
+       right:PropTypes.bool,
+       middle:PropTypes.bool,
+   }),
+
    disabled: PropTypes.bool
 };
 
@@ -55,6 +65,7 @@ Toggle.defaultProps = {
        right:false,
        middle:true
    },
+   
    disabled: false
 };
 
