@@ -4,7 +4,7 @@ import Input from './Input';
 import "./Toggle.css";
 
 const Toggle = props => {
-   const {checked, defaultChecked, onChange} = props;
+   const {checked, defaultChecked, disabled, onChange} = props;
    let [data, setData] = useState(checked ? checked : defaultChecked);
 
    useEffect(() => {
@@ -36,9 +36,9 @@ const Toggle = props => {
 
    return (
     <div className="Toggle">
-        <Input type="radio" direction="left"   checked={data.left} onChange={() => handleChange('left')}  />
-        <Input type="radio" direction="middle" checked={data.middle} onChange={() => handleChange('middle')} />
-        <Input type="radio" direction="right"  checked={data.right} onChange={() => handleChange('right')} />
+        <Input type="radio" direction="left"   disabled={disabled} checked={data.left} onChange={() => handleChange('left')}  />
+        <Input type="radio" direction="middle" disabled={disabled} checked={data.middle} onChange={() => handleChange('middle')} />
+        <Input type="radio" direction="right"  disabled={disabled} checked={data.right} onChange={() => handleChange('right')} />
     </div>
    )
 };
@@ -46,6 +46,7 @@ const Toggle = props => {
 Toggle.propTypes = {
    checked: PropTypes.object,
    defaultChecked: PropTypes.object,
+   disabled: PropTypes.bool
 };
 
 Toggle.defaultProps = {
@@ -53,7 +54,8 @@ Toggle.defaultProps = {
        left:false,
        right:false,
        middle:true
-   }
+   },
+   disabled: false
 };
 
 export default Toggle;
