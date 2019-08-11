@@ -75,7 +75,14 @@ ReactDOM.render(<App />, rootElement);
 
 ## Example
 
+### Controlled component
+
 [![Edit react-triple-toggle](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-triple-toggle-zesk5?fontsize=14)
+
+
+### Uncontrolled component
+
+[![Edit react-triple-toggle-2](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/nice-brook-yzeid?fontsize=14)
 
 ## Built With
 
